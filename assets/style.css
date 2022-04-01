@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(229, 207, 207);
+}
+
+header {
+    display: block;
+    width: 100%;
+    background-color: #eb4511;
+    background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
+}
