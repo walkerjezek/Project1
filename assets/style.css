@@ -29,9 +29,12 @@ p {
 #movie-poster {
     display: flex;
     justify-content: center;
-    box-shadow: 5px 5px 5px 5px rgb(217, 252, 163);
+    
 }
 
+#movie-poster img {
+    box-shadow: 5px 5px 5px 5px rgb(217, 252, 163);
+}    
 
 h3, form {
     font-family: 'Staatliches', cursive;
