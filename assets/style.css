@@ -29,7 +29,6 @@ p {
 #movie-poster {
     display: flex;
     justify-content: center;
-    
 }
 
 #movie-poster img {
