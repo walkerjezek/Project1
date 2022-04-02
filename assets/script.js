@@ -8,8 +8,7 @@ function getApi(event) {
   event.preventDefault();
   var movie = movieInput.value;
   var omdbUrl = `https://www.omdbapi.com/?apikey=d0dda485&t=${movie}`;
-  
-  // http://www.omdbapi.com/?apikey=[yourkey]&
+ 
   console.log("hello");
 
   fetch(omdbUrl)

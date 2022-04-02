@@ -24,5 +24,13 @@ p {
 
 #moviePoster {
     border: black;
+}
+
+h3 {
+    font-family: 'Russo One', sans-serif;
+    font-family: 'Staatliches', cursive;
+    line-height: 20px;
+    font-size: x-large;
 
 }
+
