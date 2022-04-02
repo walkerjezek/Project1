@@ -29,6 +29,7 @@ p {
 #movie-poster {
     display: flex;
     justify-content: center;
+    box-shadow: 5px 5px 5px 5px rgb(217, 252, 163);
 }
 
 
@@ -47,3 +48,9 @@ h3, form {
 				  -1px -1px 0 #23430C;
 }
 
+#ratingsArea {
+    color:rgb(209, 212, 213);
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    font-family: 'Russo One', sans-serif;
+}
