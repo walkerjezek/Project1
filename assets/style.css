@@ -33,6 +33,7 @@ p {
 
 #movie-poster img {
     box-shadow: 5px 5px 5px 5px rgb(217, 252, 163);
+    border-radius: 10px;
 }    
 
 h3, form {
@@ -55,4 +56,8 @@ h3, form {
     text-align: center;
     font-family: 'Staatliches', cursive;
     font-family: 'Russo One', sans-serif;
+}
+
+.rating-space {
+    margin-top: 15px; 
 }

@@ -33,14 +33,14 @@ var posterTemplate =
 
 var ratingSectionTemplate =
 `<div>Metascore: ${metascore}</div>
- <div id="rating-color">IMDB Rating: ${imdbScore}</div>`
+ <div class="rating-space">IMDB Rating: <span id="rating-color">${imdbScore}</span></div>`
 
  movieRatings.innerHTML = ratingSectionTemplate;
 
  if (imdbScore >= 7.5) {
   $("#rating-color").css("color", "green");
 } else if (imdbScore > 3.5 && imdbScore < 7.5) {
-  $("#rating-color").css("color", "white");
+  $("#rating-color").css("color", "orange");
 } else {
   $("#rating-color").css("color", "red");
 };
