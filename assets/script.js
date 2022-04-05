@@ -2,6 +2,7 @@ var movieForm = document.getElementById('movie-form');
 var movieInput = document.getElementById('movie-input');
 var moviePoster = document.getElementById('movie-poster');
 var movieRatings = document.getElementById('ratingsArea');
+var zipCode = document.getElementById('zipCodeInput');
 
 // var fandangoURL = 'http://api.fandango.com/v1/?op=theatersbymoviepostalcodesearch&movieid=151500&postalcode=94105&apikey=&sig=91ca250fe4cc7bbf385bad82737d70cbefe6a3d9e8f5fb8dc8fc1aa29c993381';
 
@@ -45,6 +46,23 @@ var ratingSectionTemplate =
   $("#rating-color").css("color", "red");
 };
 }
+
+// Function to get movie showtimes
+function getShowtimes (event) {
+  event.preventDefault();
+  var zip = zipCode.value;
+  var fandangoURL = 'http://api.fandango.com/v1/?op=moviesbypostalcodesearch&postalcode=' + zip +'&apikey=&sig=89fc442ab325b96c33374679907a0b4c304060703e74b30ef2b3d67396240f30';
+
+  fetch(fandangoURL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    });
+
+}
+
 
 console.log('howdy');
 movieForm.addEventListener('submit', getApi)
