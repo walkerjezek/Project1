@@ -18,7 +18,7 @@
     <section class="pure-g">
         <header class="pure-u-1">
             <h1 class="1-box">Let's go see a movie!</h1>
-            <p class="description">Use the search form to look up a movie! It will give you local showtimes and ratings!</p>
+            <p class="description">Use the search form to look up a movie!</p>
         </header>
     </section>
   
@@ -36,18 +36,14 @@
         <button type="submit" class="pure-button" id="searchButton">Search</button>
     </form>
 
-    <h3 class="zipCode" id="zipCode">Enter your zip code to get local showtimes.</h3>
-    <form class="pure-form">
-        <input type="text" class="pure-input-rounded" placeholder="Zip Code" />
-        <button type="submit" class="pure-button" id="searchZipCode">Search</button>
-    </form>
+    <div class="hidden" id="description"><h3>Movie Description</h3></div>
+    <div id="descriptionArea"></div>
 
-    <div class="showtimes" id="showtime"><h3>Showtimes!</h3></div>
-    <div id="showtimeArea"></div>
-
-    <div class="movieRatings" id="ratings"><h3>Ratings</h3></div>
+    <div class="movieRatings hidden" id="ratings"><h3>Ratings</h3></div>
     <div id="ratingsArea"></div>
     <!-- had to get rid of class="pure-g" in line above or else text overlaps -->
+
+
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
