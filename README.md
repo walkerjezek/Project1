@@ -1,7 +1,7 @@
 # Project1- Movie Search App :movie_camera:	
 
 ## Description 
-For this group project we decided to create a movie database access page. This application allows the user the input a movie title into the search form to get a description of the movie and its ratings. This helps the user decide if this is a movie they would want to watch based on the output. 
+For this group project we decided to create a movie database access page. This application allows the user the input a movie title into the search form to get random trivia of the movie and its ratings. This helps the user decide if this is a movie they would want to watch based on the output. 
 
 While working on this project we learned how to collaborate and solve issues and resolve any obstacles that came up. 
 
@@ -24,6 +24,8 @@ See the deployed application here
 - Anita Chavez (Neeta525)
 
 ## Screenshots :camera_flash:
-![alt text](---)
+![alt text](Images/ScreenshotMovieApp1.png)
+![alt text](Images/ScreenshotMovieApp2.png)
+
 
 
