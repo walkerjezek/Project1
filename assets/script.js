@@ -2,8 +2,10 @@ var movieForm = document.getElementById('movie-form');
 var movieInput = document.getElementById('movie-input');
 var moviePoster = document.getElementById('movie-poster');
 var movieRatings = document.getElementById('ratingsArea');
+var movieDescription = document.getElementById('descriptionArea');
+var descriptionBlock = document.getElementById('description');
+var ratingsBlock = document.getElementById('ratings');
 
-// var fandangoURL = 'http://api.fandango.com/v1/?op=theatersbymoviepostalcodesearch&movieid=151500&postalcode=94105&apikey=&sig=91ca250fe4cc7bbf385bad82737d70cbefe6a3d9e8f5fb8dc8fc1aa29c993381';
 
 function getApi(event) {
   event.preventDefault();
@@ -19,6 +21,7 @@ function getApi(event) {
     .then(function (data) {
       console.log(data);
       renderMovie(data);
+      wikipedia();
     });
 
 }
@@ -27,7 +30,7 @@ function renderMovie(response) {
   var metascore = response.Metascore;
   var imdbScore = response.imdbRating;
 var posterTemplate = 
-  `<img src='${response.Poster}' alt='movie poster image'/>`;
+  `<img src='${response.Poster}' alt= 'movie poster image'/>`;
 
   moviePoster.innerHTML = posterTemplate;
 
@@ -45,6 +48,34 @@ var ratingSectionTemplate =
   $("#rating-color").css("color", "red");
 };
 }
+
+
+function wikipedia(response) {
+
+  var movie = movieInput.value;
+  var wikiURL = 'https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=' + movie;
+
+  fetch(wikiURL)
+    .then(function (response) {
+      return response.json()
+    })
+    .then(function (data) {
+      console.log(data);
+      renderWiki(data);
+    });
+
+}
+
+function renderWiki(data) {
+  var description = data.query.search[0].snippet
+
+  movieDescription.innerHTML = description;
+  descriptionBlock.classList.remove('hidden');
+  ratingsBlock.classList.remove('hidden');
+
+}
+
+
 
 console.log('howdy');
 movieForm.addEventListener('submit', getApi)
