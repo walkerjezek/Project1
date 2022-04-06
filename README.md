@@ -19,9 +19,9 @@ See the deployed application here
 
 ## Contributers
 
-- Ryann Goldberg
-- Walker Jezek
-- Anita Chavez
+- Ryann Goldberg (ryann127)
+- Walker Jezek (walkerjezek)
+- Anita Chavez (Neeta525)
 
 ## Screenshots :camera_flash:
 ![alt text](---)
