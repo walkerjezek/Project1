@@ -15,7 +15,7 @@ To assist the user, the ratings number changes color based on the ratings.
 ## Deployed Link
 
 See the deployed application here 
-[My MDb](https://github.com/walkerjezek/Project1 "My MDb") 
+[My MDb](https://walkerjezek.github.io/Project1/ "My MDb") 
 
 ## Contributers
 
