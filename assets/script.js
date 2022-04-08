@@ -14,6 +14,8 @@ function getApi(event) {
  
   console.log("hello");
 
+  localStorage.setItem("movieTitle", movie);
+  
   fetch(omdbUrl)
     .then(function (response) {
       return response.json()
