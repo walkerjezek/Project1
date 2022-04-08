@@ -21,7 +21,7 @@ function getApi(event) {
     .then(function (data) {
       console.log(data);
       renderMovie(data);
-      wikipedia();
+      theMovieData(data);
     });
 
 }
@@ -29,6 +29,7 @@ function renderMovie(response) {
   console.log(response.Poster);
   var metascore = response.Metascore;
   var imdbScore = response.imdbRating;
+ 
 var posterTemplate = 
   `<img src='${response.Poster}' alt= 'movie poster image'/>`;
 
@@ -50,24 +51,24 @@ var ratingSectionTemplate =
 }
 
 
-function wikipedia(response) {
-
+function theMovieData(response) {
   var movie = movieInput.value;
-  var wikiURL = 'https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=' + movie;
-
-  fetch(wikiURL)
+  var imdbIdentity = response.imdbID;
+  
+  var movieDataURL = `https://api.themoviedb.org/3/find/${imdbIdentity}?api_key=fbc028ed7ae11035b2013b010544e3e6&language=en-US&external_source=imdb_id`
+  fetch(movieDataURL)
     .then(function (response) {
       return response.json()
     })
     .then(function (data) {
       console.log(data);
-      renderWiki(data);
+      renderMovieData(data);
     });
 
 }
 
-function renderWiki(data) {
-  var description = data.query.search[0].snippet
+function renderMovieData(response) {
+  var description = response.movie_results[0].overview;
 
   movieDescription.innerHTML = description;
   descriptionBlock.classList.remove('hidden');
@@ -78,5 +79,6 @@ function renderWiki(data) {
 
 
 console.log('howdy');
-movieForm.addEventListener('submit', getApi)
+movieForm.addEventListener('submit', getApi);
+
 
