@@ -15,7 +15,7 @@ To assist the user, the ratings number changes color based on the ratings.
 ## Deployed Link
 
 See the deployed application here 
-[Named Link](http://www. "Named link title") 
+[My MDb](https://github.com/walkerjezek/Project1 "My MDb") 
 
 ## Contributers
 
@@ -24,8 +24,8 @@ See the deployed application here
 - Anita Chavez (Neeta525)
 
 ## Screenshots :camera_flash:
-![alt text](Images/ScreenshotMovieApp1.png)
-![alt text](Images/ScreenshotMovieApp2.png)
+![alt text](Images/project1ss1.png)
+![alt text](Images/project1ss2.png)
 
 
 
